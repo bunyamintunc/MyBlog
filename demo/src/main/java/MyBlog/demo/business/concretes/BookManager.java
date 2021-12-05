@@ -38,4 +38,13 @@ public class BookManager implements BookService {
 		return this.bookDao.findById(id);
 	}
 
+
+	@Override
+	public Book Add(Book book) {
+		
+		return this.bookDao.save(book);
+		
+		
+	}
+
 }
