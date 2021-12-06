@@ -7,27 +7,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import MyBlog.demo.business.abstracts.MovieService;
-import MyBlog.demo.entities.concretes.Movie;
+import MyBlog.demo.business.abstracts.TripService;
+import MyBlog.demo.entities.concretes.Trip;
 
 @RestController
-@RequestMapping("/api/movies")
-public class MoviesController {
+@RequestMapping("/api/trips")
+public class TripsController {
 	
-	private MovieService movieService;
+	private TripService tripService;
     
 	@Autowired
-	public MoviesController(MovieService movieService) {
+	public TripsController(TripService tripService) {
 		super();
-		this.movieService = movieService;
+		this.tripService = tripService;
 	}
 	
 	@GetMapping("/getall")
-	public List<Movie> getAll(){
-		
-		return this.movieService.getAll();
-		
+	public List<Trip> getAll(){
+		return this.tripService.getAll();
 	}
+	
+	
 	
 
 }
