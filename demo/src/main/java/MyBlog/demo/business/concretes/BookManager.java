@@ -47,4 +47,13 @@ public class BookManager implements BookService {
 		
 	}
 
+
+	@Override
+	public void remove(int id) {
+		
+		this.bookDao.deleteById(id);
+		
+	}
+	
+	
 }

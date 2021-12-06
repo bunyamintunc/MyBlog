@@ -7,15 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Data
 @Entity
 @Table(name="books")
-@AllArgsConstructor
-@NoArgsConstructor
+
 
 public class Book {
 	@Id
@@ -38,6 +37,10 @@ public class Book {
 	@Column(name="books_image")
 	private String bookImage;
 	
+	public Book(){
+		
+	}
+
 	public Book(int id, String bookName, String bookWriter, int countPaper, int categoryId, String bookImage) {
 		super();
 		this.id = id;
@@ -95,8 +98,7 @@ public class Book {
 	public void setBookImage(String bookImage) {
 		this.bookImage = bookImage;
 	}
-	public Book() {
-		
-	}
+	
+	
 
 }

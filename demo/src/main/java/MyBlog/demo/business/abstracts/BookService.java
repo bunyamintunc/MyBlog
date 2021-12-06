@@ -10,4 +10,5 @@ public interface BookService {
   List<Book> getAll();
   Optional<Book> getByBookId(int id);
   Book Add(Book book);
+  void remove(int id);
 }
