@@ -7,4 +7,6 @@ import MyBlog.demo.entities.concretes.Trip;
 public interface TripService {
 
 	 List<Trip> getAll();
+	 void Add(Trip trip);
+	 String deleteTripById(int tripId);
 }

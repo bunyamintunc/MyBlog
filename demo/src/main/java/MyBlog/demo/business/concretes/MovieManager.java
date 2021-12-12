@@ -30,4 +30,10 @@ public class MovieManager implements MovieService{
 		return this.movieDao.save(movie);
 	}
 
+	@Override
+	public String deleteMovieById(int movieId) {
+		this.movieDao.deleteById(movieId);
+		return movieId +" numaralı film silindi";
+	}
+
 }

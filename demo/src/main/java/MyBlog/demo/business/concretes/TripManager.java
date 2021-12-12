@@ -23,4 +23,17 @@ public class TripManager implements TripService{
 		return this.tripDao.findAll();
 	}
 
+	@Override
+	public void Add(Trip trip) {
+		
+		 this.tripDao.save(trip);
+		
+	}
+
+	@Override
+	public String deleteTripById(int tripId) {
+		this.tripDao.deleteById(tripId);
+		return tripId +" numaralı gezi silindi";
+	}
+
 }
