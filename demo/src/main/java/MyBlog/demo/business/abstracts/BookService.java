@@ -11,4 +11,5 @@ public interface BookService {
   Optional<Book> getByBookId(int id);
   Book Add(Book book);
   void remove(int id);
+  public String deleteById(int id);
 }

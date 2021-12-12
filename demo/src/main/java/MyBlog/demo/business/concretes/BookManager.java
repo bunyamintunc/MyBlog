@@ -54,6 +54,13 @@ public class BookManager implements BookService {
 		this.bookDao.deleteById(id);
 		
 	}
+
+
+	@Override
+	public String deleteById(int id) {
+		this.bookDao.deleteById(id);
+		return "Kitap silindi";
+	}
 	
 	
 }
