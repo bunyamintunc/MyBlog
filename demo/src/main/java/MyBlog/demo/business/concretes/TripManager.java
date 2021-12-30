@@ -24,9 +24,9 @@ public class TripManager implements TripService{
 	}
 
 	@Override
-	public void Add(Trip trip) {
+	public 	Trip Add(Trip trip) {
 		
-		 this.tripDao.save(trip);
+		return this.tripDao.save(trip);
 		
 	}
 

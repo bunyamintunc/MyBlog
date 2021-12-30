@@ -3,6 +3,7 @@ package MyBlog.demo.api.concretes;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,15 +26,16 @@ public class TripsController {
 		super();
 		this.tripService = tripService;
 	}
-	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/getall")
 	public List<Trip> getAll(){
 		return this.tripService.getAll();
 	}
-	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/add")
 	public Trip add(@RequestBody Trip trip) {
-		return this.add(trip);
+		System.out.print(trip.getDescriptions());
+		return this.tripService.Add(trip);
 	}
 	
 	@DeleteMapping("/delete/{tripId}")
